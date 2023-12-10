@@ -209,7 +209,7 @@ module Conversations::BaseController
         )
     end
   end
-  
+end
 
   private
 
