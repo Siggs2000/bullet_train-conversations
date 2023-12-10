@@ -1,3 +1,7 @@
+
+require "bullet_train/super_load_and_authorize_resource/version"
+require "bullet_train/super_load_and_authorize_resource/engine"
+
 class Participants::ConversationsController <  BulletTrain::Conversations.participant_parent_controller.constantize
   include ::Conversations::BaseController
 
