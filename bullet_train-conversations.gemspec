@@ -26,14 +26,14 @@ Gem::Specification.new do |spec|
   spec.add_dependency "bullet_train-super_scaffolding", "~> 1.0"
   spec.add_dependency "extended_email_reply_parser", "~> 0.5"
 
-  spec.add_development_dependency "bullet_train", "~> 1.0"
-  spec.add_development_dependency "bullet_train-themes", "~> 1.0"
-  spec.add_development_dependency "bullet_train-themes-light", "~> 1.0"
+  spec.add_development_dependency "bullet_train", "~> 1.6.9"
+  spec.add_development_dependency "bullet_train-themes", "~> 1.6.9"
+  spec.add_development_dependency "bullet_train-themes-light", "~> 1.6.9"
   spec.add_development_dependency "factory_bot_rails", "~> 6.2"
   spec.add_development_dependency "minitest", "~> 5.1"
   spec.add_development_dependency "pg", "~> 1.3"
   spec.add_development_dependency "rails", "~> 7.0.0"
-  spec.add_development_dependency "bullet_train-integrations-stripe", "~> 1.0"
+  spec.add_development_dependency "bullet_train-integrations-stripe", "~> 1.6.9"
   spec.add_development_dependency "minitest-rails", "~> 7.0"
   spec.add_development_dependency "turbo-rails", "~> 1.0"
 end

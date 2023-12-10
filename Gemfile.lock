@@ -386,11 +386,11 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
-  bullet_train (~> 1.0)
+  bullet_train (~> 1.6.9)
   bullet_train-conversations!
-  bullet_train-integrations-stripe (~> 1.0)
-  bullet_train-themes (~> 1.0)
-  bullet_train-themes-light (~> 1.0)
+  bullet_train-integrations-stripe (~> 1.6.9)
+  bullet_train-themes (~> 1.6.9)
+  bullet_train-themes-light (~> 1.6.9)
   factory_bot_rails (~> 6.2)
   minitest (~> 5.1)
   minitest-rails (~> 7.0)
