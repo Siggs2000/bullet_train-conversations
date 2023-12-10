@@ -1,3 +1,6 @@
+require "bullet_train/super_load_and_authorize_resource/version"
+require "bullet_train/super_load_and_authorize_resource/engine"
+
 class Account::ConversationsController < Account::ApplicationController
   include Conversations::BaseController
 
