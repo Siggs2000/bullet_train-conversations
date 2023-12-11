@@ -36,5 +36,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bullet_train-integrations-stripe", "~> 1.0"
   spec.add_development_dependency "minitest-rails", "~> 7.0"
   spec.add_development_dependency "turbo-rails", "~> 1.0"
-  spec.add_development_dependency "bullet_train-super_load_and_authorize_resource", "~> 2.0"
+  spec.add_development_dependency "bullet_train-super_load_and_authorize_resource", "~> 1.6.9"
 end

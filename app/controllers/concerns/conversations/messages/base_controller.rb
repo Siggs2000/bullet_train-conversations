@@ -1,9 +1,9 @@
 module Conversations::Messages::BaseController
   extend ActiveSupport::Concern
 
-  # included do
-  #   account_load_and_authorize_resource :message, through: :conversation, through_association: :messages, member_actions: [:reply, :thread]
-  # end
+  included do
+    account_load_and_authorize_resource :message, through: :conversation, through_association: :messages, member_actions: [:reply, :thread]
+  end
 
   # GET /account/conversations/:conversation_id/conversations/messages
   # GET /account/conversations/:conversation_id/conversations/messages.json
