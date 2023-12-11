@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rails", ">= 6.0"
   spec.add_dependency "bullet_train-super_scaffolding", "~> 1.0"
   spec.add_dependency "extended_email_reply_parser", "~> 0.5"
+  spec.add_dependency "bullet_train-super_load_and_authorize_resource", "~> 1.6.9"
 
   spec.add_development_dependency "bullet_train", "~> 1.0"
   spec.add_development_dependency "bullet_train-themes", "~> 1.0"
@@ -36,5 +37,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bullet_train-integrations-stripe", "~> 1.0"
   spec.add_development_dependency "minitest-rails", "~> 7.0"
   spec.add_development_dependency "turbo-rails", "~> 1.0"
-  spec.add_development_dependency "bullet_train-super_load_and_authorize_resource", "~> 1.6.9"
 end
