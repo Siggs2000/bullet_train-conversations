@@ -82,6 +82,7 @@ module Conversations::Messages::BaseController
     strong_params = params.require(:conversations_message).permit(
       :body,
       :parent_message_id,
+      :style
       # 🚅 super scaffolding will insert new fields above this line.
       # 🚅 super scaffolding will insert new arrays above this line.
     )
