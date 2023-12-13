@@ -25,8 +25,15 @@
 
 <script>
   function scrollToBottom() {
-    const messages = document.getElementById('messages');
-    messages.scrollTop = messages.scrollHeight;
+    // Dynamically get the conversation ID
+    const conversationId = '<%= conversation.id %>';
+    const messagesDivId = 'messages_' + conversationId;
+
+    // Get the messages div by its dynamically generated ID
+    const messagesDiv = document.getElementById(messagesDivId);
+    if (messagesDiv) {
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
   }
 
   document.addEventListener('turbo:render', () => {
