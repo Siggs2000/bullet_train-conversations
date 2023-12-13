@@ -36,10 +36,12 @@
     }
   }
 
-  document.addEventListener('turbo:render', () => {
+  // Listen for CableReady's after-morph event
+  document.addEventListener('cable-ready:after-morph', () => {
     scrollToBottom();
   });
 
+  // Existing event listeners
   document.addEventListener('DOMContentLoaded', () => {
     scrollToBottom();
   });
