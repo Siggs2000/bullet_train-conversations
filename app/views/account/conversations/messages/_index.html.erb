@@ -25,25 +25,31 @@
 
 <script>
   function scrollToBottom() {
-    // Dynamically get the conversation ID
     const conversationId = '<%= conversation.id %>';
-    const messagesDivId = 'messages_' + conversationId;
-
-    // Get the messages div by its dynamically generated ID
-    const messagesDiv = document.getElementById(messagesDivId);
+    const messagesDiv = document.getElementById('messages_' + conversationId);
     if (messagesDiv) {
       messagesDiv.scrollTop = messagesDiv.scrollHeight;
     }
   }
 
-  // Listen for CableReady's after-morph event
-  document.addEventListener('cable-ready:after-morph', () => {
-    scrollToBottom();
-  });
+  function createMutationObserver() {
+    const conversationId = '<%= conversation.id %>';
+    const messagesDiv = document.getElementById('messages_' + conversationId);
 
-  // Existing event listeners
+    const observer = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        if (mutation.type === 'childList') {
+          scrollToBottom();
+        }
+      });
+    });
+
+    observer.observe(messagesDiv, { childList: true });
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     scrollToBottom();
+    createMutationObserver();
   });
 </script>
 
