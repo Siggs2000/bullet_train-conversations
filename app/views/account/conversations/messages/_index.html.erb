@@ -10,7 +10,7 @@
 <% end %>
 
 <% content_for :messages, flush: true do %>
-  <div id="messages_<%= conversation.id %>" data-controller="chat" data-action="turbo:render->chat#scroll" class="flex flex-col p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch relative py-6 px-8" style="max-height: 80vh;">
+  <div id="messages_<%= conversation.id %>" class="flex flex-col p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch relative py-6 px-8" style="max-height: 80vh;">
     <%= turbo_frame_tag "messages" do %>
       <div>
         <div class="">
@@ -22,6 +22,13 @@
     <% end %>
   </div>
 <% end %>
+
+<script>
+  document.addEventListener('turbo:render', function() {
+    var chatContainer = document.getElementById('messages_<%= conversation.id %>');
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+  });
+</script>
 
 <%= render 'account/shared/box' do |p| %>
   <% p.content_for :title, heading || t('.header') %>
