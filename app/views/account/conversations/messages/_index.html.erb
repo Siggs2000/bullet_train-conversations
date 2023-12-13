@@ -24,9 +24,17 @@
 <% end %>
 
 <script>
-  document.addEventListener('turbo:render', function() {
-    var chatContainer = document.getElementById('messages_<%= conversation.id %>');
-    chatContainer.scrollTop = chatContainer.scrollHeight;
+  function scrollToBottom() {
+    const messages = document.getElementById('messages');
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  document.addEventListener('turbo:render', () => {
+    scrollToBottom();
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    scrollToBottom();
   });
 </script>
 
